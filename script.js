@@ -31,8 +31,7 @@ const doubleAndReturnArgs = (arr, ...nums) => [
 
 function removeRandom(items) {
   let rndm = Math.floor(Math.random() * items.length);
-  const removed = [...items.splice(rndm, 1)];
-  return items;
+  return [...items.slice(0, rndm), ...items.slice(rndm + 1)];
 }
 
 /** Return a new array with every item in array1 and array2. */
